@@ -48,6 +48,7 @@ const SheetContent = React.forwardRef(({ side = "right", className, children, ..
   <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content ref={ref} className={cn(sheetVariants({ side }), className)} {...props}>
+      <SheetTitle className="sr-only">Sheet Dialog</SheetTitle>
       {children}
       <SheetPrimitive.Close
         className="absolute right-8 top-8 transition-opacity outline-none">
