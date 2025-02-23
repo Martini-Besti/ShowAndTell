@@ -1,7 +1,17 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // Root of your project
     "paths": {
-      "@/*": ["./*"]
+      "@lib/*": ["lib/*"], // Maps @lib to the lib/ directory at the root
+      "@components/*": ["components/*"], // Maps @components to the components/ directory
+      "@/*": ["*"] // Optional: for other general aliases
     }
-  }
+  },
+  "include": [
+    "next-env.d.ts", // Include type definitions for Next.js
+    "**/*.ts",        // If you're using TypeScript
+    "**/*.tsx",       // If you're using TypeScript
+    "**/*.js",        // If you're using JavaScript
+    "**/*.jsx"        // If you're using JSX
+  ]
 }
