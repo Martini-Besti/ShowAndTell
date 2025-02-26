@@ -2,6 +2,7 @@
 
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -20,7 +21,7 @@ const services = [
   },
   {
     num: "03",
-    title: "E-Commerce Soutions",
+    title: "E-Commerce Solutions",
     description:
       "With an eye for marketing and a passion for design, I create e-commerce websites that drive sales and increase revenue.",
     href: "",
@@ -34,9 +35,9 @@ const services = [
   },
   {
     num: "05",
-    title: "Branding & Visual Identity ",
+    title: "Branding & Visual Identity",
     description:
-      "I help businesses increase their online visibility and attract more customers through search engine optimization and digital marketing strategies. Strong branding is key to standing out. I help craft a unique visual identity that represents your business.",
+      "Strong branding is key to standing out. I help craft a unique visual identity that represents your business.",
     href: "",
   },
   {
@@ -47,38 +48,49 @@ const services = [
     href: "",
   },
 ];
-import { motion } from "framer-motion";
 
 const Services = () => {
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+            transition: { delay: 0.6, duration: 0.5, ease: "easeOut" },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 gap[60px]"
+          className="grid grid-cols-1 md:grid-cols-2 gap-16"
         >
-          {services.map((service, index) => {
-            return (
-              <div key={index} className="flex-1 flex flex-col justify-center gap-6 group">
-                <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">{service.num}</div>
-                  <Link href={service.href} className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
-                    <BsArrowDownRight className="text-primary text-3xl" />
-                  </Link>
-                </div>
-                {/*title*/}
-                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{service.title}</h2>
-                {/*description*/}
-                <p className="text-white/60">{service.description}</p>
-                {/* border */}
-                <div className="border-b border-white/20 w-full"></div>
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="flex flex-col justify-between gap-6 group h-full min-h-[320px] p-6 bg-gray-900 rounded-xl shadow-lg"
+            >
+              {/* Number & Arrow */}
+              <div className="flex items-center justify-between">
+                <span className="text-6xl font-extrabold text-white/40 group-hover:text-white transition-all duration-500">
+                  {service.num}
+                </span>
+                <Link
+                  href={service.href}
+                  className="w-16 h-16 rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45 shadow-md"
+                >
+                  <BsArrowDownRight className="text-primary text-3xl" />
+                </Link>
               </div>
-            );
-          })}
+
+              {/* Title */}
+              <h2 className="text-3xl font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
+                {service.title}
+              </h2>
+
+              {/* Description */}
+              <p className="text-white/70 text-lg leading-relaxed">{service.description}</p>
+
+              {/* Border */}
+              <div className="border-b border-white/20 w-full"></div>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>
