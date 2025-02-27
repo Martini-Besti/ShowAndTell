@@ -43,8 +43,8 @@ where I can contribute to innovative projects while continuing to grow as a deve
       fieldValue: "East Midlands, UK",
     },
     {
-      fieldName: "Languages",
-      fieldValue: "English",
+      fieldName: "Countries Visited",
+      fieldValue: "80+",
     },
     {
       fieldName: "Years on Earth",
