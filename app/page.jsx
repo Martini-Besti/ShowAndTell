@@ -17,7 +17,7 @@ const Home = () => {
             <h1 className="h1 mb-6">
               Hi I'm <br /> <span className="text-accent">Martina Best</span>
             </h1>
-            <p className="max-w0[500px] mb-9 text-white/80">
+            <p className="max-w-[500px] mb-9 text-white/80">
               I’m a Full Stack Developer with a passion for building scalable,
               high-quality web applications. After transitioning from roles in
               aviation and customer service, I discovered my love for software
@@ -27,15 +27,17 @@ const Home = () => {
               innovative projects while continuing to grow as a developer.
             </p>
             {/* button and socials */}
-            <div className="flex felx-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+            <div className="flex flex-col xl:flex-row items-center gap-8">
+              <a href="https://docs.google.com/document/d/1G2x-rff68XMbY5ypl21sDK831jE7ozMt0tat-4hAQV4/edit?usp=sharing" download="https://docs.google.com/document/d/1G2x-rff68XMbY5ypl21sDK831jE7ozMt0tat-4hAQV4/edit?usp=sharing">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>Download CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"
@@ -47,7 +49,7 @@ const Home = () => {
           </div>
 
           {/* photo */}
-          <div className="order-1 xl:order-non mb-8 xl:mb-0">
+          <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
           </div>
         </div>
