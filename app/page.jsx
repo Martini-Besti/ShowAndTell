@@ -28,7 +28,11 @@ const Home = () => {
             </p>
             {/* button and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <a href="https://docs.google.com/document/d/1G2x-rff68XMbY5ypl21sDK831jE7ozMt0tat-4hAQV4/edit?usp=sharing" download="https://docs.google.com/document/d/1G2x-rff68XMbY5ypl21sDK831jE7ozMt0tat-4hAQV4/edit?usp=sharing">
+              <a
+                href="https://docs.google.com/document/d/1G2x-rff68XMbY5ypl21sDK831jE7ozMt0tat-4hAQV4/export?format=pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="lg"
