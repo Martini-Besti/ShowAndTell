@@ -50,15 +50,15 @@ const Photo = () => {
           }}
           className="absolute inset-0 flex items-center justify-center"
         >
-          <Image
-            src="/MartinaPhoto_transparent.png"
-            priority
-            quality={100}
-            width={250}
-            height={350}
-            alt="Martina"
-            className="object-cover mix-blend-lighten w-[83px] h-[116px] sm:w-[166px] sm:h-[233px] xl:w-[250px] xl:h-[350px]"
-          />
+      <Image
+  src="/photobw.png"
+  priority
+  quality={100}
+  width={280} // Slightly wider
+  height={350}
+  alt="Martina"
+  className="object-cover mix-blend-lighten rounded-2xl w-[100px] h-[116px] sm:w-[180px] sm:h-[233px] xl:w-[280px] xl:h-[350px]"
+/>
         </motion.div>
       </motion.div>
     </div>

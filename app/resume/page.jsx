@@ -300,7 +300,7 @@ const Resume = () => {
                   </ul>
                 </ScrollArea>
               </div>
-              education
+              
             </TabsContent>
             {/* skills */}
             <TabsContent value="skills" className="w-full h-full">
