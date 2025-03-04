@@ -26,8 +26,9 @@ const projects = [
     category: "Full Stack Development",
     title: "ChitChat App",
     description:
-      "This is the backend code for a simple messaging app using Node.js, Express, MongoDB, and Socket.IO. It provides the necessary endpoints and real-time communication functionality for a messaging system, where users can send and receive private messages in real-time.",
+      "A fun styled messaging app using Nextjs, Node.js, Express, MongoDB, and Socket.IO. It provides the necessary endpoints and real-time communication functionality for a messaging system, where users can send and receive private messages in real-time.",
     stack: [
+      { name: "Next.js" },
       { name: "Css" },
       { name: "Tailwind" },
       { name: "Javascript" },
