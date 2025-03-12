@@ -28,7 +28,7 @@ where I can contribute to innovative projects while continuing to grow as a deve
     },
     {
       fieldName: "Email",
-      fieldValue: "See resume download for details or contact page",
+      fieldValue: "see contact me page",
     },
     {
       fieldName: "Experience in Tech",
