@@ -30,6 +30,7 @@ export async function POST(request) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'martina.consulting@outlook.com', // Your email where you want to receive form submissions
+
       subject: `New Contact Form Submission - ${service}`,
       text: `
         Name: ${firstname} ${lastname}
@@ -46,8 +47,25 @@ export async function POST(request) {
         <p><strong>Service:</strong> ${service}</p>
         <p><strong>Message:</strong> ${message}</p>
       `,
-    };
-
+        };
+      //   subject: `New Contact Form Submission - ${service}`,
+    //   text: `
+    //     Name: ${firstname} ${lastname}
+    //     Email: ${email}
+    //     Phone: ${phone}
+    //     Service: ${service}
+    //     Message: ${message}
+    //   `,
+    //   html: `
+    //     <h2>New Contact Form Submission</h2>
+    //     <p><strong>Name:</strong> ${firstname} ${lastname}</p>
+    //     <p><strong>Email:</strong> ${email}</p>
+    //     <p><strong>Phone:</strong> ${phone}</p>
+    //     <p><strong>Service:</strong> ${service}</p>
+    //     <p><strong>Message:</strong> ${message}</p>
+    //   `,
+  
+  // };
     // Send email
     await transporter.sendMail(mailOptions);
 
