@@ -202,11 +202,11 @@ const Contact = () => {
               {info.map((item, index) => {
                 return <li key={index} className="flex items-center gap-4">
                   <div className="w-[52px] h-[52px] xl:h-[72px] text-accent rounded-md flex items-center justify-center">
-                    <div className="text-[28px]">{item.icon}</div>
+                    <div className="text-[28px]">{}</div>
                   </div>
                   <div className="flex-1">
-                    <p className="text-white/60">{item.title}</p>
-                    <h3 className="text-xl">{item.description}</h3>
+                    <p className="text-white/60">{}</p>
+                    <h3 className="text-xl">{}</h3>
                   </div>
                 </li>
               })}
